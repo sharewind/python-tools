@@ -16,7 +16,7 @@ def update_env_profile(config_file=None):
         return
 
     with open(config_file,'r') as f:
-        for line in f.readlines():
+        for line in f:
 
             if not line or not line.strip('\n'): continue
             if line.startswith("#"):
