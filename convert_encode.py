@@ -15,10 +15,10 @@ def convert_file_encoding(filename, src_encoding='GBK',target_encoding = 'UTF-8'
         f = codecs.open(filename, 'w', target_encoding)
         f.writelines(lines)
         f.close()
-    except:
-        pass
+    except Exception as e:
+        print "exception: ",e
     finally:
-        f.close()
+        if f: f.close()
 
 def walk(base_path, file_extensions="*"):
     # short name
