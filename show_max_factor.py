@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from timeit import timeit
 __author__ = 'Caijanfeng'
 
 def show_max_factor(num):

@@ -4,13 +4,16 @@ import fnmatch
 import os
 import sys
 
-def convert_file_encoding(filename, src_encoding='GBK',target_encoding = 'UTF-8'):
+def convert_file_encoding(filename, src_encoding='UTF-8',target_encoding = 'UTF-8'):
     f = None
     try:
         # read file by src_encoding
         f = codecs.open(filename, 'r', src_encoding)
         lines = f.readlines()#or use f.read() to fetch the whole file content
         f.close()
+        
+        
+        
         # write file as target encoding
         f = codecs.open(filename, 'w', target_encoding)
         f.writelines(lines)
